@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Sorter with Login</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List Sorter</h1>
+
+        <!-- Login form -->
+        <div class="login-container">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="loginBtn">Login</button>
+            
+        </div>
+        <button id="logoutBtn" style="display: none;">Logout</button>
+
+        <!-- Input form for tasks (Visible only when logged in) -->
+        <div class="task-input" id="taskInputSection" style="display: none;">
+            <input type="text" id="taskDescription" placeholder="Enter task description" required>
+            <input type="number" id="taskPriority" placeholder="Priority (1 = highest)" required min="1">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <!-- Display list of tasks -->
+        <h2 class="task" style="display: none;">Your Tasks:</h2>
+        <ul id="taskList"></ul>
+
+        <!-- Button to sort tasks -->
+        <button id="sortBtn" style="display: none;">Sort by Priority</button>
+
+        <!-- Sorted task list -->
+        <h2 class="sort" style="display: none;">Sorted Tasks:</h2>
+        <ul id="sortedTaskList"></ul>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
